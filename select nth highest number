@@ -1,0 +1,13 @@
+# define a function to query the nth highest number 
+
+CREATE FUNCTION getNthHighestNumber (N INT) RETURNS INT
+BEGIN 
+  SET N = N-1;
+RETURN(
+  SELECT IFNULL((SELECT number FROM table ORDER BY number DESC LIMIT N,1),NULL)
+
+);
+END
+
+# equal to "SELECT number FROM table ORDER BY number DESC LIMIT 1 OFFSET N"
+

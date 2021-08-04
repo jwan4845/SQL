@@ -1,0 +1,9 @@
+DATEDIFF(date1, date2)
+
+Example 1:  SELECT DATEDIFF("2017-01-01", "2016-12-24");
+
+Answer: 8
+
+Example 2: SELECT DATEDIFF("2017-06-25 09:34:21", "2017-06-15 15:25:35");
+
+Answer: 10
